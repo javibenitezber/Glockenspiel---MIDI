@@ -15,16 +15,26 @@ void loop() {
   // put your main code here, to run repeatedly:
   for(pos = 40; pos <=180; pos+=1){
     servo1.write(pos);
-    servo2.write(pos);
     delay(3);
-    
-  }
-  for(pos = 180; pos >=40; pos-=1){
+    }
+
+    for(pos = 180; pos >=40; pos-=1){
     servo1.write(pos);
+    delay(3);
+    }
+
+    for(pos = 40; pos <=160; pos+=1){
     servo2.write(pos);
     delay(3);
-   
-  }
-  
     
+    }
+    
+    for(pos = 160S; pos >=40; pos-=1){
+    servo2.write(pos);
+    delay(3);
+    }
+
+
 }
+  
+  
