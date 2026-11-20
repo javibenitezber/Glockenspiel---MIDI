@@ -49,19 +49,19 @@ void loop() {
     
   }
 
-  for(pos = 1; pos <=180; pos+=1){
+  for(pos = 6; pos <=180; pos+=1){
     SOL.write(pos);
-    delay(4);
+    delay(5);
     
   }
 
-  for(pos = 1; pos <=180; pos+=1){
+  for(pos = 15; pos <=180; pos+=1){
     LA.write(pos);
-    delay(4);
+    delay(5);
     
   }
 
-  for(pos = 1; pos <=180; pos+=1){
+  for(pos = 3; pos <=180; pos+=1){
     SI.write(pos);
     delay(6);
     
