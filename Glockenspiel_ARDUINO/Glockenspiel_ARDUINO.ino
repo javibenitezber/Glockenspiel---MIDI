@@ -8,23 +8,23 @@ Servo SOL;
 Servo LA;
 Servo SI;
 Servo DO2;
-
+const int REPOSO = 180;
 int pos = 0;
 
 void setup() {
   // put your setup code here, to run once:
-  DO.attach(0);
-  RE.attach(1);
-  MI.attach(2);
-  FA.attach(3);
-  SOL.attach(4);
-  LA.attach(5);
-  SI.attach(6);
-  DO2.attach(7);
+  DO.write(REPOSO);  DO.attach(2);
+  RE.write(REPOSO);  RE.attach(3);
+  MI.write(REPOSO);  MI.attach(4);
+  FA.write(REPOSO);  FA.attach(5);
+  SOL.write(REPOSO); SOL.attach(6);
+  LA.write(REPOSO);  LA.attach(7);
+  SI.write(REPOSO);  SI.attach(8);
+  DO2.write(REPOSO); DO2.attach(9);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // // put your main code here, to run repeatedly:
   tocar_DO();
   tocar_RE();
   tocar_MI();
@@ -61,7 +61,7 @@ void loop() {
   
 //FUNCIONES ACCIONADORAS DE NOTAS
 void tocar_DO(){
-  for(pos = 1; pos <=180; pos+=1){
+  for(pos = 3; pos <=180; pos+=1){
     DO.write(pos);
     delay(5);
   }
@@ -75,14 +75,14 @@ void tocar_RE(){
 }
 
 void tocar_MI(){
-  for(pos = 1; pos <=180; pos+=1){
+  for(pos = 35; pos <=180; pos+=1){
     MI.write(pos);
     delay(5);
   }
 }
 
 void tocar_FA(){
-  for(pos = 1; pos <=180; pos+=1){
+  for(pos = 5; pos <=180; pos+=1){
     FA.write(pos);
     delay(5);
   }
@@ -91,12 +91,12 @@ void tocar_FA(){
 void tocar_SOL(){
   for(pos = 1; pos <=180; pos+=1){
     SOL.write(pos);
-    delay(6);
+    delay(5);
   }
 }
 
 void tocar_LA(){
-  for(pos = 15; pos <=180; pos+=1){
+  for(pos = 13; pos <=180; pos+=1){
     LA.write(pos);
     delay(5);
   }
@@ -105,12 +105,12 @@ void tocar_LA(){
 void tocar_SI(){
   for(pos = 1; pos <=180; pos+=1){
     SI.write(pos);
-    delay(6);
+    delay(5);
   }
 }
 
 void tocar_DO2(){
- for(pos = 1; pos <=180; pos+=1){
+ for(pos = 25; pos <=180; pos+=1){
     DO2.write(pos);
     delay(5);
   }
